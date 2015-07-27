@@ -94,7 +94,7 @@
                 });
 
                 $analyticsProvider.registerEventTrack(function (action, properties) {
-                    analytics.trackEvent(success, failure, properties.category, action, properties.label, properties.value);
+                    analytics.trackEvent(success, failure, properties.category, action, properties.label || "", properties.value || -1);
                 });
             });
         }])
